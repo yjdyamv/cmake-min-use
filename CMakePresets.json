@@ -37,6 +37,48 @@
         "CMAKE_INSTALL_RPATH_USE_LINK_PATH": "ON",
         "CMAKE_INSTALL_RPATH": "$ORIGIN/../lib"
       }
+    },
+    {
+      "name": "msvc-config",
+      "displayName": "MSVC Presets",
+      "binaryDir": "build",
+      "generator": "Visual Studio 18 2026",
+      "cacheVariables": {
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+
+        "CMAKE_CXX_FLAGS_DEBUG": "-Zi -Od -MDd -RTC1 -D_DEBUG -fp:precise -Oy-",
+        "CMAKE_C_FLAGS_DEBUG": "-Zi -Od -MDd -RTC1 -D_DEBUG -fp:precise -Oy-",
+        "CMAKE_EXE_LINKER_FLAGS_DEBUG": "-DEBUG:FULL -INCREMENTAL",
+
+        "CMAKE_CXX_FLAGS_RELEASE": "-Ox -DNDEBUG -MD -Gw",
+        "CMAKE_C_FLAGS_RELEASE": "-Ox -DNDEBUG -MD -Gw",
+        "CMAKE_EXE_LINKER_FLAGS_RELEASE": "-INCREMENTAL:NO -OPT:REF -OPT:ICF -LTCG",
+
+        "CMAKE_CXX_FLAGS_RELWITHDEBINFO": "-O2 -Zi -DNDEBUG -MD -Oy- -fp:precise",
+        "CMAKE_C_FLAGS_RELWITHDEBINFO": "-O2 -Zi -DNDEBUG -MD -Oy- -fp:precise",
+        "CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO": "-DEBUG:FULL -INCREMENTAL:NO -OPT:REF",
+
+        "CMAKE_CXX_FLAGS_MINSIZEREL": "-O1 -Os -DNDEBUG -MD -Gw",
+        "CMAKE_C_FLAGS_MINSIZEREL": "-O1 -Os -DNDEBUG -MD -Gw",
+        "CMAKE_EXE_LINKER_FLAGS_MINSIZEREL": "-INCREMENTAL:NO -OPT:REF -OPT:ICF -LTCG",
+
+        "CMAKE_CXX_STANDARD": "23",
+        "CMAKE_C_STANDARD": "23",
+        "CMAKE_CXX_STANDARD_REQUIRED": "ON",
+        "CMAKE_C_STANDARD_REQUIRED": "ON",
+
+        "CMAKE_CXX_FLAGS": "-W4 -WX- -permissive- -EHsc -utf-8 -GS -guard:cf",
+        "CMAKE_C_FLAGS": "-W4 -WX- -utf-8 -GS -guard:cf",
+        "CMAKE_EXE_LINKER_FLAGS": "-NXCOMPAT -DYNAMICBASE -GUARD:CF",
+
+        "CMAKE_POSITION_INDEPENDENT_CODE": "ON",
+
+        "CMAKE_VERBOSE_MAKEFILE": "OFF",
+
+        "CMAKE_VS_INCLUDE_INSTALL_TO_DEFAULT_BUILD": "ON",
+
+        "CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS": "ON"
+      }
     }
   ]
 }
